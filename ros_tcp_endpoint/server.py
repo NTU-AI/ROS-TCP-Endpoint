@@ -218,6 +218,9 @@ class SysCommands:
             self.tcp_server.executor.add_node(new_subscriber)
 
         self.tcp_server.loginfo("RegisterSubscriber({}, {}) OK".format(topic, message_class))
+        
+    def remove_subscriber(self, topic):
+        pass
 
     def publish(self, topic, message_name, queue_size=10, latch=False):
         if topic == "":
